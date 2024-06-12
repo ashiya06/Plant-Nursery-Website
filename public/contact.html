@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Nursery</title>
+    <link rel="stylesheet" href="css/home.css">
+    <script src="js/home.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo">BotanicBliss</a>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="button" onclick="searchById()"><i class="fa fa-search"></i></button>
+            </div>
+            <div class="right-content">
+              <a href="index.html">Home</a>
+              <a href="buyNow.html">Buy Plants</a>
+              <div class="dropdown">
+                <button class="dropbtn" onclick="showDropdown()" onmouseout="showDropdown()">Plant Care
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="dropdownContent">
+                  <a href="products.html">Indoor Plants</a>
+                  <a href="outdoorpdt.html">Outdoor Plants</a>
+                </div>
+              </div>
+              <a href="#">Contact Us</a>
+              <div class="profiledrop">
+                <button onclick="myFun()" class="profilebtn">
+                    <img src="img/profile.png">
+                </button>
+                <div id="myDropdown" class="profilecontent">
+                    <a href="#">Register</a>
+                    <a href="#">Login</a>
+                </div>
+              </div>
+              
+            </div>
+        </div>
+    </header>
+    <div class="pop-up" id="myForm" style="display: none;">
+        <span class="close-icon" onclick="closePopup()"><i class="fas fa-times"></i></span>
+        <div class="form-wrap">
+            <form class="subscribe-form" action="/subscribe" method="post">
+                <input type="email" class="input" id="Email" autocomplete="off" placeholder="Email" name="email" required>
+                <input type="submit" class="button" value="Subscribe">
+            </form>
+            <div class="help-text">
+                <p>Subscribe to our newsletter for updates and promotions!</p>
+            </div><!--.help-text-->
+        </div><!--.form-wrap-->
+    </div>
+
+    <div class="contact-us">
+        <div class="container">
+            <div class="details">
+                <p>Have a question, comment, or just want to say <span>hello?</span><br> We'd love to hear from you!<br> 
+                Get in touch with us using the contact information below<br> or fill out the form, and
+                <span>we'll get back to you as soon as possible.</span></p>
+            </div>
+            <div class="forms">
+                <form action="/" method="post">
+                    <h1 class="handwritten">Send us a Message !!</h1>
+                    <div class="form-group">
+                        <label for="Name" class="handwritten">Name</label>
+                        <input type="text" id="Name" name="Name" placeholder="Full Name" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="Email" class="handwritten">Email</label>
+                        <input type="email" id="Email" name="Email" placeholder="Email Address" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="Message" class="handwritten">Message</label>
+                        <textarea id="Message" name="Message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <input type="submit" value="Submit" class="submit-button">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- FORM VALIDATION SCRIPT -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.querySelector("form");
+    
+            form.addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent form submission
+    
+                // Validate name field
+                const nameInput = document.getElementById("Name");
+                if (nameInput.value.trim() === "") {
+                    alert("Please enter your name");
+                    return;
+                }
+    
+                // Validate email field
+                const emailInput = document.getElementById("Email");
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(emailInput.value.trim())) {
+                    alert("Please enter a valid email address");
+                    return;
+                }
+    
+                // Validate message field
+                const messageInput = document.getElementById("Message");
+                if (messageInput.value.trim() === "") {
+                    alert("Please enter your message");
+                    return;
+                }
+    
+                // If all fields are valid, submit the form
+                form.submit();
+            });
+        });
+    </script>
+    
+
+    <!-- FOOTER -->
+    <footer id="picassoFooter" style="margin-top:100px;">
+        <div class="footer-navigation">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: blggedbliss@gmail.com</p>
+            <p>Phone: +123 456 7890</p>
+        </div>
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" class="social-icon">FB</a>
+                <a href="https://twitter.com" target="_blank" class="social-icon">TW</a>
+                <a href="https://instagram.com" target="_blank" class="social-icon">IG</a>
+            </div>
+        </div>
+        
+    </footer>
+    
+
+
+    
+</body>
+</html>

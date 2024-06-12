@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Platypi:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Platypi:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap');
+
+body{
+    overflow-x: hidden;
+}
+.navbar {
+    margin-left:20px;
+    margin-right:10px;
+    background-color: #089424; /* Main color */
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px; /* Adjust padding as needed */
+    font-family: "Platypi", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    z-index:0;
+  }
+
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+  }
+
+  .navbar a:hover {
+    background-color: #04691b; /* Darker shade of main color on hover */
+  }
+
+  .logo {
+    color: #fff;
+    font-size: 24px; /* Adjust font size as needed */
+    text-decoration: none;
+    font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+  }
+
+  .right-content {
+    display: flex;
+    align-items: center;
+  }
+
+  .right-content a {
+    margin-left: 20px; /* Adjust spacing between links as needed */
+  }
+
+  .right-content a:last-child {
+    margin-left: 0; /* Remove margin from last link */
+  }
+
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: fixed; /* Position the dropdown relative to the viewport */
+    top: 70px; /* Adjust the top position as needed */
+    right: 100; /* Position the dropdown to the right */
+    background-color: white;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    /* padding: 12px 16px; */
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #04691b; /* Darker shade of main color on hover */
+  }
+  
+  /* .dropbtn:hover .dropdown-content {
+    display: block !important;
+    z-index:2;
+  } */
+  
+  .dropbtn {
+    font-family: "Platypi", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Adjust font size as needed */
+  }
+  
+  .dropbtn:hover {
+    background-color: #04691b; /* Darker shade of main color on hover */
+  }
+  /* PROFILE */
+  .right-content .profilebtn img{
+    width:60px;
+    height:60px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+
+  /* Dropdown Button */
+  .profilebtn{
+    background-color: transparent;
+    border: none;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .profilebtn:hover, .profilebtn:focus {
+    background-color: transparent;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .profiledrop {
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .profilecontent {
+    display: none;
+    position: fixed; /* Position the dropdown relative to the viewport */
+    top: 90px; /* Adjust the top position as needed */
+    right: 0; /* Position the dropdown to the right */
+    background-color: #f1f1f1;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2; /* Increase z-index to ensure it's above other content */
+  }
+  
+  /* Links inside the dropdown */
+  .profilecontent a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .profilecontent a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
+
+/* POP-UP */
+.pop-up {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  border: 2px double #333; /* Double border */
+  padding: 20px;
+  background-color:white;
+}
+.form-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px; /* Margin between elements */
+}
+
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
+  width: 300px; /* Adjust width as needed */
+  margin-bottom: 10px; /* Margin between input elements */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.button {
+  width: 150px; /* Adjust width as needed */
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+.help-text {
+  margin-top: 10px; /* Margin between form and help text */
+  text-align: center;
+}
+
+.close-icon {
+  position: absolute;
+  top: 5px; /* Adjust as needed */
+  right: 5px; /* Adjust as needed */
+  cursor: pointer;
+  color: #888; /* Adjust color as needed */
+  font-size: 15px;
+}
+
+
+
+  /* CART */
+  .cart .cart-btn img{
+    width:28px;
+    height:28px;
+    cursor:pointer;
+  }
+
+/* PAGE TITLE */
+.page-title h1{
+    text-align: center;
+    color:#04691b;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin-bottom: 20px;
+}
+
+.page-title img{
+    height:240px;
+    width:100%;
+}
+
+/* PRODUCTS */
+.pdts .row{
+    justify-content: center;
+    display: flex;
+    margin-top:80px;
+    margin-bottom: 36px;
+    margin-left:10px;
+}
+.pdts .row .img-container .bsimg{
+    width:280px;
+    height:320px;
+    border:1px solid black;
+    margin-bottom:10px;
+}
+.pdts .row .img-container .rating{
+    position: relative;
+    top:40px;
+    left:60px;
+    margin-top:-40px;
+}
+.pdts .row .img-container h3{
+    text-align:center;
+    position: relative;
+    top:0px;
+    left:0px;
+}
+.pdts .row .img-container h4{
+    background-color: yellow;
+    color:darkgreen;
+    border:1px solid darkgreen;
+    position:relative;
+    top:-360px;
+    left:16px;
+    z-index: 2;
+    font-size:10px;
+    width:40px;
+}
+
+.pdts .row .img-container .plant-name a{
+    background-color: #04691b;
+    color: white;
+    padding:10px 20px 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    top:0px;
+    left:70px;
+}
+
+#picassoFooter {
+    background-color: #04691b;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    margin-top:60px;
+}
+
+.footer-navigation, .footer-contact, .footer-social {
+    margin: 10px;
+}
+
+.footer-navigation h3, .footer-contact h3, .footer-social h3 {
+    color: #f0f0f0;
+    margin-bottom: 15px;
+}
+
+.footer-navigation ul, .footer-social .social-icons {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-navigation ul li, .social-icon {
+    margin-bottom: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.footer-navigation ul li a, .social-icon {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.social-icon {
+    display: inline-block;
+    padding: 8px;
+    background-color: #04691b;
+    margin-right: 5px;
+}
+
+.social-icon:hover, .footer-navigation ul li a:hover {
+    transform: scale(1.1);
+}

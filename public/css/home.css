@@ -1,0 +1,921 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Platypi:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Platypi:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap');
+body{
+    overflow-x: hidden;
+}
+.navbar {
+    margin-left:20px;
+    margin-right:10px;
+    background-color: #089424; /* Main color */
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px; /* Adjust padding as needed */
+    font-family: "Platypi", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    z-index:0;
+  }
+
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+  }
+
+  .navbar a:hover {
+    background-color: #04691b; /* Darker shade of main color on hover */
+  }
+
+  .logo {
+    color: #fff;
+    font-size: 24px; /* Adjust font size as needed */
+    text-decoration: none;
+    font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+  }
+
+  .right-content {
+    display: flex;
+    align-items: center;
+  }
+
+  .right-content a {
+    margin-left: 20px; /* Adjust spacing between links as needed */
+  }
+
+  .right-content a:last-child {
+    margin-left: 0; /* Remove margin from last link */
+  }
+
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: fixed; /* Position the dropdown relative to the viewport */
+    top: 70px; /* Adjust the top position as needed */
+    right: 100; /* Position the dropdown to the right */
+    background-color: white;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    /* padding: 12px 16px; */
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #04691b; /* Darker shade of main color on hover */
+  }
+  
+  /* .dropbtn:hover .dropdown-content {
+    display: block !important;
+    z-index:2;
+  } */
+  
+  .dropbtn {
+    font-family: "Platypi", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Adjust font size as needed */
+  }
+  
+  .dropbtn:hover {
+    background-color: #04691b; /* Darker shade of main color on hover */
+  }
+  /* PROFILE */
+  .right-content .profilebtn img{
+    width:60px;
+    height:60px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+
+  /* Dropdown Button */
+  .profilebtn{
+    background-color: transparent;
+    border: none;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .profilebtn:hover, .profilebtn:focus {
+    background-color: transparent;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .profiledrop {
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .profilecontent {
+    display: none;
+    position: fixed; /* Position the dropdown relative to the viewport */
+    top: 90px; /* Adjust the top position as needed */
+    right: 0; /* Position the dropdown to the right */
+    background-color: #f1f1f1;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2; /* Increase z-index to ensure it's above other content */
+  }
+  
+  /* Links inside the dropdown */
+  .profilecontent a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .profilecontent a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
+
+  /* POP-UP */
+  .pop-up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    border: 2px double #333; /* Double border */
+    padding: 20px;
+    background-color:white;
+}
+.form-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* Margin between elements */
+}
+
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input {
+    width: 300px; /* Adjust width as needed */
+    margin-bottom: 10px; /* Margin between input elements */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.button {
+    width: 150px; /* Adjust width as needed */
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+.help-text {
+    margin-top: 10px; /* Margin between form and help text */
+    text-align: center;
+}
+
+.close-icon {
+    position: absolute;
+    top: 5px; /* Adjust as needed */
+    right: 5px; /* Adjust as needed */
+    cursor: pointer;
+    color: #888; /* Adjust color as needed */
+    font-size: 15px;
+}
+
+
+  /* CART */
+  .cart .cart-btn img{
+    width:28px;
+    height:28px;
+    cursor:pointer;
+  }
+
+
+  /* IMAGE SLIDER */
+  
+  .slider-container .overlay {
+    position: absolute;
+    top: 42;
+    left: 20;
+    width: 97.5%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), transparent); /* Adjust the opacity and colors as needed */
+    }
+
+  .slider-container {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-left:20px;
+    margin-right: 20px;
+    width: 100%;
+    position: relative;
+    top:20px;
+  }
+  
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .slider img{
+    height:480px;
+    width:1170px;
+  }
+
+  .slide {
+    flex: 0 0 100%;
+  }
+  
+  .dots-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .dot {
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: #555;
+  }
+
+  .title{
+    overflow-y: hidden;
+    text-align: center;
+    color:white;
+    position:relative;
+    top:-360px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+  .title h3{
+    font-family: "Great Vibes", cursive;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 36px;
+  }
+
+  .title h1{
+    font-size:36px;
+    font-weight: bold;
+  }
+
+  .title a{
+    border: 2px double black;
+    padding:10px 10px 10px 10px;
+    background-color: white;
+    color:black;
+    position:relative;
+    text-decoration: none;
+    width:60px;
+  }
+
+  .title a:hover{
+    background-color: rgba(255,255,255,0.6);
+    color:black;
+  }
+
+  /* SALES */
+  .sales{
+    background-color: rgb(233, 240, 98);
+    position: relative;
+    top:-270px;
+    width:98%;
+    left:20px;
+    height:60px;
+    
+  }
+  .sales h2{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    padding-bottom:-10px;
+    font-size:20px;
+    color:darkgreen;
+    margin-left:250px;
+  }
+  .sales a{
+    padding:10px 20px 10px 20px;
+    border:2px double black;
+    text-decoration: none;
+    position: relative;
+    top:-50px;
+    left:700px;
+    color:white;
+    background-color: #04691b;
+    cursor: pointer;
+  }
+
+  .options{
+    display: flex;
+    justify-content: center; /* Horizontally center the items */
+    position: relative;
+    top:-240px;
+    left:20px;
+    
+  }
+  
+  .image {
+    width: 140px; /* Adjust the width of each image */
+    height: 140px; /* Adjust the height of each image */
+    border-radius: 50%; /* Make the images circular */
+    margin-right: 36px; /* Adjust the spacing between the images */
+    border: 6px double pink;
+    cursor: pointer;
+  }
+
+  .image:hover {
+    transform: scale(1.1); /* Zoom the image by 10% on hover */
+  }
+
+  .img-container {
+    text-align: center; /* Center the caption */
+    margin: 10px; /* Adjust the spacing between the images */
+  }
+
+  .caption {
+    margin-top: 5px; /* Adjust the spacing between the image and caption */
+    margin-left:-28px;
+  }
+
+  /* Plant Parent */
+  .plant-parent{
+    width:100%;
+    background-color: aliceblue;
+    height:100px;
+    color:brown;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size:14px;
+    position:relative;
+    top:-240px;
+  }
+
+  .plant-parent h2{
+    margin-left:250px;
+    padding-top: 20px;
+  }
+  
+  .plant-parent a{
+    text-decoration: none;
+    border: 2px double white;
+    background-color: brown;
+    color:white;
+    padding:10px 20px 10px 20px;
+    position:relative;
+    top:-50px;
+    left:700px;
+    font-weight: bold;
+  }
+
+  /* Best Picks */
+  .best-picks{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    position: relative;
+    top:-220px;
+  }
+  .best-picks .images-bestPicks{
+    display:flex;
+    justify-content: center;
+    
+  }
+
+  .best-picks .images-bestPicks img{
+    width:260px;
+    height:280px;
+    margin-left:20px;
+    margin-bottom:10px;
+    border:2px solid green;
+    transition: 0.5s all ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+    
+  }
+  .best-picks .images-bestPicks img:hover{
+    transform: scale(1.1);
+    overflow: hidden;
+  }
+
+  .best-picks .images-bestPicks .caption{
+    position: relative;
+    left:140px;
+  }
+
+  /* BESTSELLER */
+  .bestseller{
+    position:relative;
+    top:-200px;
+  }
+  .bestseller .images{
+    justify-content: center;
+    display: flex;
+  }
+  .bestseller .images .img-container .bsimg{
+    width:280px;
+    height:320px;
+    border:1px solid black;
+    margin-bottom:10px;
+  }
+  .bestseller .images .img-container .rating{
+    position: relative;
+    top:40px;
+    left:0px;
+    margin-top:-40px;
+  }
+  .bestseller .images .img-container h3{
+    text-align:center;
+    position: relative;
+    top:0px;
+    left:0px;
+  }
+  .bestseller .images .img-container h4{
+    background-color: yellow;
+    color:darkgreen;
+    border:1px solid darkgreen;
+    position:relative;
+    top:-360px;
+    left:16px;
+    z-index: 2;
+    font-size:10px;
+    width:40px;
+  }
+
+  .bestseller .images .img-container .plant-name a{
+    background-color: #04691b;
+    color: white;
+    padding:10px 20px 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    top:0px;
+  }
+  .bestseller .all-pdt{
+    margin-left: 500px;
+
+  }
+  .bestseller a{
+    background-color: #04691b;
+    color: white;
+    padding:10px 20px 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    top:40px;
+    border-radius:10px;
+  }
+
+  /* SHOP THE LOOK */
+  .shop-look{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    position: relative;
+    top:-120px;
+  }
+
+  .shop-look h1{
+    text-align: center;
+  }
+
+  .shop-look img{
+    width:100%;
+    height:500px;
+    cursor:pointer;
+  }
+
+  /* DEAL OF THE MONTH */
+  .deal-month{
+    margin-bottom:0px;
+  }
+
+  
+  .deal-month h1{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size:36px;
+    color:black;
+    text-align: center;
+    margin-top:-36px;
+    margin-bottom:48px;
+  }
+
+  .deal-month .container img{
+    width:400px;
+    height:500px;
+    margin-left:80px;
+    border:2px solid black;
+    position: relative;
+    top:80px;
+  }
+
+  .deal-month .container .details{
+    position: relative;
+    top:-480px;
+    left:600px;
+  }
+
+  .deal-month .container .details h2{
+    color:#04691b;
+    font-size:32px;
+  }
+
+  .deal-month .container .details h4{
+    color:grey;
+    text-decoration: line-through;
+    position:relative;
+    top:-40px;
+    left:10px;
+  }
+
+  .deal-month .container .details h3{
+    color:black;
+    position: relative;
+    top:-80px;
+    left:80px;
+  }
+
+  .deal-month .container .rating{
+    position: relative;
+    width:140px;
+    height:32px;
+    border:none;
+    top:-20px;
+    left:-90px;
+  }
+
+
+  .deal-month .container .details #buy-now{
+    padding:10px 48px 10px 48px;
+    border: 2px solid #04691b;
+    background-color: white;
+    color:#04691b;
+    font-size:24px;
+    position: relative;
+    top:0px;
+    left:0px;
+    margin-bottom:20px;
+  }
+
+  .deal-month .container .plant-care{
+    margin-top:-80px;
+    margin-bottom: 40px;
+    margin-right:40px;
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+  }
+
+  /* SHOP-NOW */
+  .shop-now .bgimg{
+    margin-top:40px;
+    margin-bottom:40px;
+    width:1170px;
+    margin-left:20px;
+
+  }
+  .shop-now .overlay {
+    margin-top:40px;
+    margin-left: 20px;
+    width: 96%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), transparent); /* Adjust the opacity and colors as needed */
+  }
+
+  .shop-now .title{
+    margin-top:-400px;
+    margin-left:20px;
+    margin-right:20px;
+  }
+
+  .shop-now .title h2{
+    font-size:20px;
+  }
+
+  .shop-now .container{
+    margin-top:-320px;
+    display:flex;
+    justify-content: center;
+    
+  }
+
+  .shop-now .container .reserve{
+    margin-right:40px;
+    width:400px;
+    height:400px;
+    color:white;
+  }
+
+  .shop-now .container .reserve .booking{
+    background-color: white;
+    text-decoration: none;
+    color:#04691b;
+    padding:10px 10px 10px 10px;
+    position: relative;
+    top:80px;
+    left:100px;
+    font-size:24px;
+    border:2px solid #04691b;
+  }
+
+  .shop-now .container .reserve h2{
+    margin-top:120px;
+    color:white;
+    z-index:2;
+  }
+
+  .shop-now .container .reserve .call-now{
+    margin-top:-80px;
+    margin-left:20px;
+  }
+
+  .shop-now .container .reserve .call-now i{
+    margin-left:36px;
+  }
+
+  .shop-now .container .reserve .call-now h3{
+    position:relative;
+    left:60px;
+    top:-40px;
+  }
+
+  .shop-now .container .location{
+    width:500px;
+    height:500px;
+  }
+  
+  /* CONTACT FORM */
+  /*------FORM------*/
+.contact-us .forms{
+  width:480px;
+  height:480px;
+  background-color: transparent;
+  margin-top:-10px;
+  margin-left:-36px;
+  margin-bottom:40px;
+  border: 2px solid black;
+  color:#04691b;
+  position: relative;
+  top:100px;
+  left:0px;
+}
+.contact-us .forms form {
+  display: flex;
+  flex-direction: column;
+}
+
+.handwritten {
+  /* font-family: Great Vibes; */
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  margin-top:20px;
+  margin-left:120px;
+}
+.contact-us .forms .form-group {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.contact-us .forms label {
+  margin-left:80px;
+  display: inline-block;
+  width: 100px; /* Adjust as needed */
+  font-size: 28px;
+}
+
+.contact-us .forms input, textarea {
+  background-color: transparent;
+  font-size:16px;
+  display: inline-block;
+  margin-top:20px;
+  width: 200px;
+  margin-left: 10px;
+  border:none;
+  border-bottom: 2px solid black;
+  outline: none;
+  height:40px;
+  color:#04691b;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.contact-us .forms .submit-button {
+  
+  
+  color: #04691b; /* White text color */
+  padding: 10px 20px; /* Padding around the text */
+  text-align: center; /* Center-align the text */
+  text-decoration: none; /* Remove underlines from the text */
+  display: inline-block; /* Display as inline-block */
+  font-size: 16px; /* Font size */
+  margin-top: 20px; /* Add some margin from the top */
+  cursor: pointer; /* Add pointer cursor on hover */
+  border-radius: 5px; /* Add rounded corners */
+  margin-left: 120px;
+  border:2px double #04691b
+}
+
+.contact-us .forms .submit-button:hover {
+  background-color: #04691b;
+  color:white;
+}
+
+
+.contact-us .container{
+  display:flex;
+  justify-content: center;
+
+}
+
+.contact-us .container .details{
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    margin-top:200px;
+    margin-left:40px;
+    margin-right:40px;
+
+}
+
+.contact-us .container .details p{
+  font-size:20px;
+}
+
+.contact-us .container .details span{
+  color:#04691b;
+}
+
+
+/* BOOK-NOW */
+.book-now {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.book-now h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  margin-top: 20px;
+}
+
+.input-field select,
+.input-field input[type="text"],
+.input-field input[type="email"],
+.input-field textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.flex-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-section .input-field {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.input-field input[type="submit"],
+.input-field input[type="reset"] {
+  display: block;
+  width: 100%;
+  padding: 10px 10px 10px 10px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.input-field input[type="submit"]:hover,
+.input-field input[type="reset"]:hover {
+  background-color: #0056b3;
+}
+
+.book-now .submit{
+  padding:10px 10px 10px 10px;
+  background-color: #04691b;
+  margin-right:40px;
+  margin-left:220px;
+}
+
+.book-now .reset{
+  padding:10px 10px 10px 10px;
+  background-color: #04691b;
+  margin-right:40px;
+}
+
+.book-now .close-icon{
+  margin-top:-50px;
+}
+
+
+/* FOOTER */
+  #picassoFooter {
+    background-color: #04691b;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    margin-top:-200px;
+}
+
+.footer-navigation, .footer-contact, .footer-social {
+    margin: 10px;
+}
+
+.footer-navigation h3, .footer-contact h3, .footer-social h3 {
+    color: #f0f0f0;
+    margin-bottom: 15px;
+}
+
+.footer-navigation ul, .footer-social .social-icons {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-navigation ul li, .social-icon {
+    margin-bottom: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.footer-navigation ul li a, .social-icon {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.social-icon {
+    display: inline-block;
+    padding: 8px;
+    background-color: #04691b;
+    margin-right: 5px;
+}
+
+.social-icon:hover, .footer-navigation ul li a:hover {
+    transform: scale(1.1);
+}

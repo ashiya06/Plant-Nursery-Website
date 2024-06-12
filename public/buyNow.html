@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ButNow</title>
+
+    <!-- <link rel="stylesheet" href="css/home.css"> -->
+    <link rel="stylesheet" href="css/buy-now.css">
+    <script src="js/home.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo">BotanicBliss</a>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="button" onclick="searchById()"><i class="fa fa-search"></i></button>
+            </div>
+            <div class="right-content">
+              <a href="index.html">Home</a>
+              <a href="buyNow.html">Buy Plants</a>
+              <div class="dropdown">
+                <button class="dropbtn" onclick="showDropdown()" onmouseout="showDropdown()">Plant Care
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="dropdownContent">
+                  <a href="products.html">Indoor Plants</a>
+                  <a href="outdoorpdt.html">Outdoor Plants</a>
+                </div>
+              </div>
+              <a href="contact.html">Contact Us</a>
+              <div class="profiledrop">
+                <button onclick="myFun()" class="profilebtn">
+                    <img src="img/profile.png">
+                </button>
+                <div id="myDropdown" class="profilecontent">
+                    <a href="#">Register</a>
+                    <a href="#">Login</a>
+                </div>
+              </div>
+              
+            </div>
+        </div>
+    </header>
+    <div class="pop-up" id="myForm" style="display: none;">
+        <span class="close-icon" onclick="closePopup()"><i class="fas fa-times"></i></span>
+        <div class="form-wrap">
+            <form class="subscribe-form" action="/subscribe" method="post">
+                <input type="email" class="input" id="Email" autocomplete="off" placeholder="Email" name="email" required>
+                <input type="submit" class="button" value="Subscribe">
+            </form>
+            <div class="help-text">
+                <p>Subscribe to our newsletter for updates and promotions!</p>
+            </div><!--.help-text-->
+        </div><!--.form-wrap-->
+    </div>
+
+  <div class="shop-now">
+    <div class="overlay"></div>
+    <img src="img/nursery.jpg" class="bgimg">
+    <div class="title">
+      <h1>Shop Now</h1>
+      <h2>Ready to bring some greenery into your life? Our wide selection of vibrant plants awaits you.<br>
+        To reserve your favorite plant, simply give us a call today or visit our nearest branch.</h2>
+    </div>
+    <div class="container">
+      <div class="reserve">
+        <a href="#" class="booking" onclick="booking()">Book your plant</a>
+        <h2>Our team will get in touch with you shortly to confirm your reservation.</h2>
+        <div class="call-now">
+          <h2>Or....Give us a call Now !</h2>
+          <i class="fa fa-phone" aria-hidden="true"></i>
+          <h3>+123 456 7890</h3>
+          
+        </div>
+      </div>
+      <div class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3775.493259545932!2d73.09872217336194!3d18.865186458560498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e0b05d1cc79b%3A0x4d469e0f7b5468b8!2sGo%20Green%20Nursery%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1713689785750!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-now" id="bookForm" style="display: none;">
+    <span class="close-icon" onclick="closeBooking()"><i class="fas fa-times"></i></span>
+    <form action="/" method="post"  >
+        <h2 class="sub-heading">Plant Reservation</h2>
+
+        <div class="input-field">
+            <select class="form-control" name="previousPurchase">
+                <option value="">Have you ever purchased from us before?</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+
+        <div class="input-field">
+            <select class="form-control" name="plantType">
+                <option value="">Select Plant</option>
+                <option value="Rose">Rose</option>
+                <option value="Tulip">Tulip</option>
+                <option value="Lily">Lily</option>
+                <option value="Orchid">Orchid</option>
+            </select>
+        </div>
+
+        <div class="input-field">
+            <select class="form-control" name="pickupOrShip">
+                <option value="">Would you prefer to pick up or have it shipped?</option>
+                <option value="pickUp">Pick Up</option>
+                <option value="ship">Ship</option>
+            </select>
+        </div>
+
+        <div class="input-field">
+            <input type="text" name="address" placeholder="Address" required="">
+        </div>
+
+        <div class="input-field">
+            <input type="text" name="zipcode" placeholder="Zip Code" required="">
+        </div>
+
+        <div class="flex-section">
+            <div class="input-field">
+                <input type="text" name="fullName" placeholder="Full Name" required="">
+            </div>
+            <div class="input-field">
+                <input type="email" name="email" placeholder="Email" required="">
+            </div>
+        </div>
+
+        <div class="flex-section">
+            <div class="input-field">
+                <input type="text" name="phone" placeholder="Phone Number" required="">
+            </div>
+        </div>
+
+        <div class="input-field">
+            <input type="text" name="pickupDate" placeholder="Pickup Date" required="" style="display: none;">
+        </div>
+
+        <button type="submit" value="Submit" class="submit">Submit</button>
+        <input type="reset" value="Clear Form" class="reset">
+    </form>
+</div>
+
+<script>
+    document.querySelector('select[name="pickupOrShip"]').addEventListener('change', function () {
+        var dateField = document.querySelector('input[name="pickupDate"]');
+        if (this.value === 'pickUp') {
+            dateField.style.display = 'block';
+            dateField.setAttribute('required', 'required');
+        } else {
+            dateField.style.display = 'none';
+            dateField.removeAttribute('required');
+        }
+    });
+</script>
+
+
+  <!-- FOOTER -->
+  <footer id="picassoFooter" style="margin-top:40px;">
+    <div class="footer-navigation">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Email: blggedbliss@gmail.com</p>
+        <p>Phone: +123 456 7890</p>
+    </div>
+    <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" class="social-icon">FB</a>
+            <a href="https://twitter.com" target="_blank" class="social-icon">TW</a>
+            <a href="https://instagram.com" target="_blank" class="social-icon">IG</a>
+        </div>
+    </div>
+    
+</footer>
+
+    
+    
+</body>
+</html>
